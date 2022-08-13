@@ -24,6 +24,7 @@ header {
   margin-bottom: 5px;
   border-radius: 7px;
   max-width: 630px;
+  max-height: 425px;
 }
 form {
   margin-top: 19px;
@@ -31,7 +32,7 @@ form {
   margin-right: 15px;
 }
 h2 {
-  color: rgb(255, 249, 198);
+  color: #e6d181;
   font-size: 35px;
   font-weight: 900;
   font-family: "Amatic SC", cursive;
@@ -45,7 +46,7 @@ ul {
 }
 
 li {
-  color: #939aa9;
+  color: #c9d0df;
   font-size: 17px;
   font-weight: 200;
   height: 19px;
@@ -103,7 +104,7 @@ li:first-letter {
   margin-right: 15px;
   margin-left: -130px;
   margin-bottom: 30px;
-  margin-top: -377px;
+  margin-top: -411px;
   float: left;
 }
 footer {
@@ -182,10 +183,10 @@ footer {
 .weather-forecast {
   text-align: center;
   position: relative;
-  top: -40px;
+  top: -50px;
   color: rgb(255, 255, 255);
   margin-left: 15px;
-  margin-bottom: -26px;
+  padding-bottom: 2px;
   margin-right: 15px;
 }
 .weather-forecast-date {
@@ -208,6 +209,7 @@ footer {
 .wf {
   position: relative;
   top: -100px;
+  max-width: 94%;
 }
 hr {
   color: #0459d5;
@@ -225,7 +227,7 @@ hr {
   max-width: 80px;
   margin: 0 auto;
   position: relative;
-  top: -55px;
+  top: -52px;
   transition: all 200ms ease-in-out;
 }
 .forecast-block:hover {
