@@ -1,3 +1,4 @@
+// Return current time --> Saturday 12:03
 function TimeC(time) {
   let day = time.getDay();
   let days = [
@@ -18,7 +19,7 @@ function TimeC(time) {
   }
 }
 
-//Forecast
+//Forecast for 7 days
 function displayforecastDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -31,7 +32,31 @@ function displayForecast(response) {
 
   let forecastHtml = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index <= 5) {
+    if (index === 0) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="forecast-block col-2">
+          <div class="weather-forecast-date">Today</div>
+          <img
+            src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
+            alt=""
+            width="55"
+            class="forec-icon"
+          />
+          <div class="weather-forecast-temperatures">
+            <span class="weather-forecast-temperature-max"> ${Math.round(
+              forecastDay.temp.max
+            )}° </span>
+            <span class="weather-forecast-temperature-min"> ${Math.round(
+              forecastDay.temp.min
+            )}° </span>
+          </div>
+        </div>
+  `;
+    }
+    if (index <= 6 && index > 0) {
       forecastHtml =
         forecastHtml +
         `<div class="forecast-block col-2">
@@ -68,7 +93,7 @@ function getForecast(coordinates) {
   axios.get(url).then(displayForecast);
 }
 
-//Current time
+//Current time (dispaly)
 let now = new Date();
 let date = document.querySelector("#date");
 date.innerHTML = TimeC(now);
@@ -109,6 +134,7 @@ function dTemp(response) {
 
   getForecast(response.data.coord);
 }
+//Search for city to get temperature
 function searchC(city) {
   let apiKey = "ebb3d64cbdc8a91fbd86324a76ac4571";
   let url =
@@ -119,6 +145,7 @@ function searchC(city) {
     "&units=metric";
   axios.get(url).then(dTemp);
 }
+//Click on map button
 function CurPosition(position) {
   let apiKey = "ebb3d64cbdc8a91fbd86324a76ac4571";
   let lat = position.coords.latitude;
@@ -126,6 +153,7 @@ function CurPosition(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(url).then(dTemp);
 }
+//Display your city, which you have typed
 function SubC(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
