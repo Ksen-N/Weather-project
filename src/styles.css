@@ -24,6 +24,7 @@ header {
   margin-bottom: 5px;
   border-radius: 7px;
   max-width: 630px;
+  max-height: 425px;
 }
 form {
   margin-top: 19px;
@@ -102,7 +103,7 @@ li:first-letter {
   margin-right: 15px;
   margin-left: -130px;
   margin-bottom: 30px;
-  margin-top: -377px;
+  margin-top: -411px;
   float: left;
 }
 footer {
@@ -181,10 +182,10 @@ footer {
 .weather-forecast {
   text-align: center;
   position: relative;
-  top: -40px;
+  top: -50px;
   color: rgb(0, 0, 0);
   margin-left: 15px;
-  margin-bottom: -26px;
+  padding-bottom: 2px;
   margin-right: 15px;
 }
 .weather-forecast-date {
@@ -207,6 +208,7 @@ footer {
 .wf {
   position: relative;
   top: -100px;
+  max-width: 94%;
 }
 hr {
   color: #ffe261;
@@ -216,7 +218,7 @@ hr {
   margin-bottom: 20px;
 }
 .forecast-block {
-  background: #ffffff;
+  background: #0059ff4b;
   border: 1px solid #ffffff;
   border-radius: 6px;
   padding: 2px 0px;
@@ -224,9 +226,9 @@ hr {
   max-width: 80px;
   margin: 0 auto;
   position: relative;
-  top: -55px;
+  top: -52px;
   transition: all 200ms ease-in-out;
 }
 .forecast-block:hover {
-  background: rgba(235, 181, 101, 0.507);
+  background: rgba(255, 177, 60, 0.582);
 }
