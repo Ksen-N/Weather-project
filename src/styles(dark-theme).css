@@ -1,13 +1,21 @@
 body {
-  background: rgb(0, 0, 0);
+  background: #0c2234;
+}
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 header {
   color: #42a5f5;
+  background: rgba(0, 0, 0);
   font-family: "Dosis", sans-serif;
   text-align: center;
   font-size: 30px;
   font-weight: 800;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .container {
   background: #0c2234;
@@ -109,11 +117,13 @@ li:first-letter {
 }
 footer {
   color: #42a5f5;
+  background: rgba(0, 0, 0);
   text-align: center;
   font-size: 17px;
   font-weight: 800;
   padding-bottom: 15px;
-  margin-top: 25px;
+  padding-top: 15px;
+  margin-top: auto;
 }
 .map {
   background: hsl(49, 100%, 79%);
