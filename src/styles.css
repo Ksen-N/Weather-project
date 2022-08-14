@@ -1,5 +1,11 @@
 body {
-  background: rgb(255, 255, 255);
+  background: #d9edfd;
+}
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 header {
   color: #1177c9;
@@ -7,7 +13,9 @@ header {
   text-align: center;
   font-size: 30px;
   font-weight: 800;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: rgb(255, 255, 255);
 }
 .container {
   background: #d9edfd;
@@ -112,7 +120,9 @@ footer {
   font-size: 17px;
   font-weight: 800;
   padding-bottom: 15px;
-  margin-top: 25px;
+  padding-top: 15px;
+  background: rgb(255, 255, 255);
+  margin-top: auto;
 }
 .map {
   background: hsl(49, 100%, 69%);
